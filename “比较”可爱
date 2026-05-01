@@ -1,0 +1,26 @@
+#include<stdio.h>
+
+int main(){
+	 int number,a[100],price[100];
+	scanf("%d",&number);
+	for(int i=0;i<number;i++){
+	scanf("%d",&a[i]);
+	}
+	for(int p=number-1;p>0;p--){
+			price[p]=0;
+	for(int b=p-1;b>=0;b--){
+	
+		if(a[p]>a[b]){
+			price[p]++;
+		
+		}
+	}
+		
+	}
+	price[0]=0;
+	for(int o=0;o<number;o++){
+		printf("%d",price[o]);
+		printf(" ");
+	}
+	return 0;
+}
